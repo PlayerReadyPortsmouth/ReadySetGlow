@@ -285,5 +285,6 @@ Unless you explicitly state otherwise, any contribution you intentionally submit
 ---
 
 <div align="center">
+<sub>© 2026 Ready ICT Ltd, trading as Player Ready · Built by Aurora Nicholas</sub><br>
 <sub>Govee is a trademark of its respective owner. ReadySetGlow is an independent project and is not affiliated with, endorsed by, or sponsored by Govee.</sub>
 </div>

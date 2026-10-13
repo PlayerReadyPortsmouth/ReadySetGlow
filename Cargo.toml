@@ -4,6 +4,8 @@ version = "0.1.0"
 edition = "2024"
 description = "Local-network light controller and effect editor for Govee lights (no cloud, no Govee app)"
 license = "MIT OR Apache-2.0"
+authors = ["Aurora Nicholas"]
+repository = "https://github.com/PlayerReadyPortsmouth/ReadySetGlow"
 
 [dependencies]
 base64 = "0.23"
