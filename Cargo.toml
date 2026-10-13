@@ -1,0 +1,31 @@
+[package]
+name = "readysetglow"
+version = "0.1.0"
+edition = "2024"
+description = "Local-network light controller and effect editor for Govee lights (no cloud, no Govee app)"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+base64 = "0.23"
+cpal = { version = "0.18", optional = true }
+directories = "6"
+eframe = "0.33"
+rustfft = "6.4"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+socket2 = { version = "0.6", features = ["all"] }
+
+[features]
+default = ["audio"]
+# Audio-reactive layers. On Windows "System audio" uses WASAPI loopback, so the
+# lights follow whatever the PC is playing without a microphone.
+audio = ["dep:cpal"]
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+strip = true
+
+# Faster debug builds of the effect engine; the UI crates stay unoptimised.
+[profile.dev.package."*"]
+opt-level = 2

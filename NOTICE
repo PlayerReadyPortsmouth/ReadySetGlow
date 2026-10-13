@@ -1,0 +1,68 @@
+ReadySetGlow
+Copyright 2026 Aurora Nicholas
+
+This product is dual-licensed under either of
+
+  * Apache License, Version 2.0 (LICENSE-APACHE or
+    https://www.apache.org/licenses/LICENSE-2.0)
+  * MIT License (LICENSE-MIT or https://opensource.org/licenses/MIT)
+
+at your option.
+
+-------------------------------------------------------------------------------
+Third-party material included in this source tree
+-------------------------------------------------------------------------------
+
+src/sku_table.rs
+  The table of LAN-capable Govee models and their segment counts is derived
+  from the device capability table in govee-local-api
+  (https://github.com/Galorhallen/govee-local-api), Copyright Galorhallen,
+  licensed under the Apache License, Version 2.0.
+  Modifications: the data was converted from Python to a Rust constant table,
+  reduced to the RGB, colour-temperature and segment-count fields, and is
+  consumed by ReadySetGlow's own device logic.
+
+-------------------------------------------------------------------------------
+Protocol references (no code copied)
+-------------------------------------------------------------------------------
+
+ReadySetGlow's implementation of the Govee LAN protocol was written from public
+descriptions of how the protocol works. No source code from the following
+projects is included:
+
+  * OpenRGB (https://gitlab.com/CalcProgrammer1/OpenRGB): description of the
+    "razer" per-LED streaming packet format.
+  * Community reverse-engineering notes on the Govee BLE packet format
+    (https://notes.generalzero.org/Reverse%20Engineering/Signals/Bluetooth/Govee_lights.html).
+
+-------------------------------------------------------------------------------
+Binary distributions
+-------------------------------------------------------------------------------
+
+Compiled builds of ReadySetGlow statically include Rust crates from crates.io, each
+under its own licence (predominantly MIT and/or Apache-2.0). They include:
+
+  * egui / eframe / epaint (MIT OR Apache-2.0)
+  * cpal (Apache-2.0)
+  * rustfft, socket2, serde, serde_json, base64, directories
+    (MIT and/or Apache-2.0)
+
+Builds also embed the default egui fonts:
+
+  * Ubuntu Light: Ubuntu Font Licence 1.0
+  * Noto Emoji: SIL Open Font License 1.1
+  * Hack: MIT License, Copyright 2018 Source Foundry Authors; contains
+    Bitstream Vera material under the Bitstream Vera License
+  * emoji-icon-font: MIT License, Copyright (c) 2014 John Slegers
+
+A full list of dependencies with their licence texts can be generated with
+cargo-about (https://github.com/EmbarkStudios/cargo-about) and should
+accompany any binary release.
+
+-------------------------------------------------------------------------------
+Trademarks
+-------------------------------------------------------------------------------
+
+Govee is a trademark of its respective owner. ReadySetGlow is an independent
+project and is not affiliated with, endorsed by, or sponsored by Govee.
+Product and model names are used only to identify compatible hardware.
